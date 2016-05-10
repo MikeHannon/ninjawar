@@ -1,9 +1,10 @@
+# Phase 0: fix the typos/bugs 5 or so of them...!
 # Phase 1: Comment this code!
 # Phase 2: Build out the game further, make the armies attack one another!
 # Phase 3: Set it up some that if a member of an army has less than 0 health remove it from the army
 # Phase 4: Set up the battles so that different army types fight differently!
 import random
-class Human(object):
+class Human(objet):
     def __init__(self, clan = None):
         super(Human, self).__init__()
         print 'New Human!!!'
@@ -20,7 +21,9 @@ class Human(object):
         luck = round(random.random() * 100)
         attack = self.strength
         if (self.clan):
-            pass
+            # future arguments for determine what to do if your clan is...
+            # maybe this should go in to the game class..
+            # and there is something else wrong here... but since we aren't using this if statement...
         if(luck > 50):
             if(luck * self.stealth > 150):
                 print 'attacking!'
@@ -34,7 +37,7 @@ class Human(object):
             self.health -= self.strength
             print "attack failed"
         return False
-    def reporthealth(self):
+    def reporthealth():
         if self.health > 0:
             print "I am not dead yet!"
         else:
@@ -54,8 +57,8 @@ class Warrior(Human):
         self.strength = 30
 
 class Wizard(Human):
-    """docstring for Warrior"""
-    def __init__(self, clan = 'Ninja'):
+
+    def __init__(self, clan = 'Wizard'):
         super(Warrior, self).__init__()
         self.health = 50
         self.intelligence = 3
